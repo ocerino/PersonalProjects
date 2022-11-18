@@ -1,0 +1,258 @@
+/*
+ * Globals
+ */
+:root{
+  --main-color: rgb(0, 160, 225);
+  --secondary-color: #B100E1;
+  --tertiary-color: #E14100;
+  --quaternary-color: #A0E100;
+}
+
+
+*{
+  color: var(--main-color);
+  scroll-padding-top: 5rem;
+}
+
+/*
+ * Base structure
+ */
+
+body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 95em;
+}
+
+span{
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+/*
+ * Header
+ */
+nav{
+  align-content: center;
+}
+
+#home{
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+}
+
+p{
+  text-align: center;
+  display: block;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+h2{
+  color:var(--secondary-color); 
+}
+
+.title-header,
+.timeline,
+strong{
+  color: var(--quaternary-color)
+}
+
+.copyright{
+  color: var(--tertiary-color);  
+}
+
+section{
+  align-content: center;
+  padding-bottom: 6rem;
+}
+
+.nav-masthead .nav-link {
+  color: #A0E100;
+  border-bottom: .25rem solid transparent;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+a, a:hover, a:focus{
+  color: var(--main-color)
+}
+
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  color: #B100E1;
+  border-bottom-color: #B100E1;;
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #E14100;
+  border-bottom-color: #E14100;
+}
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+}
+
+@font-palette-values --Nabla {
+	font-family: Nabla;
+	base-palette: 2;
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.animation {
+    /* background: var(--mid-blue); */
+    min-width: 45.1vw !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: calc(45vh - 5rem);
+    position: relative;
+    padding: 0;
+}
+
+.animation .color-anim {
+    font-size: 12vw;
+    line-height: 1.1;
+    letter-spacing: 0.4vh;
+    font-family: "Nabla";
+    font-kerning: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-variation-settings: "EDPT" 200;
+}
+
+.aboout-me .experience .skills .projects .contact{
+  padding-top: 5rem;
+}
+
+.animation span {
+	animation: depth 3s ease-in-out alternate infinite;
+	position: relative;
+	display: inline-block;
+	font-variation-settings: "EDPT" 30;
+	font-palette: --Nabla;
+
+	@for $i from 1 through 12 {
+		&:nth-child(#{$i}) {
+			animation-delay: $i * 0.1s;
+		}
+	}
+}
+
+.animation span:nth-child(1){
+  animation-delay: 0.33333ss;
+}
+
+@keyframes depth {
+	0% {
+		transform: translatex(0) translatey(0);
+	}
+	100% {
+		font-variation-settings: "EDPT" 200;
+		transform: translatex(0.15em) translatey(0.1em);
+	}
+}
+
+.fa,
+.fab{
+  font-size: 72px;
+  text-decoration: none;
+}
+
+#email::after{
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+  
+}
+
+.fa-instagram {
+  background: #bc2a8d;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+

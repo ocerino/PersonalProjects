@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>To-Do List WebApp</title>
+        <!--Icon Import-->
+        <link rel="icon" href="./to-do-list.png">
+        <!--CSS Import-->
+        <link rel="stylesheet" href="./ToDoListStylesheet.css"/>
+        <!--Fonts Import-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+     </head>
+
+
+    <body>
+        <header>
+            <h1>To-Do List WebApp</h1>
+        </header>
+
+        <!--Create New Task-->
+        <main class="app">
+            <section class="create-task">
+                <h2>What's on the list for today?</h2>
+                <form id="new-task-form">
+                    <h3>Add a new task</h3>
+                    <input type="text" name="content" id="new-task-input" placeholder="i.e. Walk the dog or get groceries"/>     
+                    <h3>Pick a category</h3>
+                        <div class="options">
+                            <label> 
+                                <input type="radio" name="category" id="category1" value="business"/>
+                                <span class="bubble business"></span>
+                                <div>Business</div>
+                            </label>
+                            <label> 
+                                <input type="radio" name="category" id="category2" value="personal"/>
+                                <span class="bubble personal"></span>
+                                <div>Personal</div>
+                            </label>
+                        </div>
+                        <input type="submit" value="Add Task" />
+                </form>
+            </section>
+
+        
+            <!--To-Do List Content-->
+            <section class="to-do-list" id="to-do-list">
+                <h2>Tasks</h2>
+                <div class="list" id="tasks">
+                    
+                    <!-- <div class="task">
+                        <label>
+                            <input type="checkbox" />
+                            <span class="bubble business"></span>
+                        </label>
+                    
+                        <div class="content">
+                            <input type="text" class="text" value="My business task" readonly />
+                        </div>
+                    
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    
+                    <div class="task">
+                        <label>
+                            <input type="checkbox" />
+                            <span class="bubble personal"></span>
+                        </label>
+                    
+                        <div class="content">
+                            <input type="text" class="text" value="My personal task" readonly />
+                        </div>
+                    
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+
+           
+            
+        </main>
+
+        <footer>
+            <hr/>
+            <div class="copyright">
+            Developed by Oscar Cerino &copy; 2022. All Rights Reserved
+            </div>
+        </footer>
+
+       
+            <script src="./ToDoList.js"></script>  
+    
+
+        
+
+    </body>
+       
+</html>

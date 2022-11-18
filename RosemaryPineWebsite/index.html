@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rosemary Pine</title>
+        <link rel="icon" href="./cropped-Rosemary-Pine-Logo-3-pixel-version-1.png">
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" href="./RosemaryPineStaylesheet.css"/>
+
+    </head>
+
+
+    <body>
+        <header>
+
+
+            <!-- <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div> -->
+
+            <nav id="navbar" >
+                <div class="navbar">
+                    <div class="nav-links">
+                        <div class="logo"><a href="./index.html"><img src="./cropped-cropped-Rosemary-Pine-Logo-3-pixel.png" alt="Rosemary Pine Logo" width=100px height=50px/></a></div>
+                    
+                        <ul class="links">
+                            <li>
+                                <a href="./Cart.html">Cart</a>
+                            </li>
+
+                            <li>
+                                <a href="./Contact-Us.html">Contact Us</a>
+                            </li>
+
+                            <li id="policies" class="policies">
+                                <a href="./Policies.html">Policies</a>
+                            </li>
+
+                            <div id="women's" class="dropdown">
+                                <button class="dropbtn" href="./Womens/Womens.html">Women's</button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li><a href="./Womens/Womens-Clothing.html">All Women's Clothing</a></li>
+                                        <li><a href="./Womens/Womens-Clothing/Womens-Tops.html">Tops</a></li>
+                                        <li><a href="./Womens/Womens-Clothing/Womens-Bottoms.html">Bottoms</a></li>
+                                        <li><a href="./WWomens/Womens-Accessories.html">Accessories</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="mens" class="dropdown">
+                                <button class="dropbtn" href="./Mens/Mens.html">Men's</button>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li><a href="./Mens/Mens-Clothing.html">All Men's Clothing</a></li>
+                                        <li><a href="./Mens/Mens-Clothing/Mens-Tops.html">Tops</a></li>
+                                        <li><a href="./Mens/Mens-Clothing/Mens-Bottoms.html">Bottoms</a></li>
+                                    </ul>
+                                
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            
+            <div class="popUpBannerBox"> 
+                <div class="popUpBannerInner">
+                    <div class="popUpBannerContent"> 
+                        <p><a href="#" class="closeButton">Close X</a></p>
+                        <h2>Enjoy this discount!</h2>
+                        <br/>
+                        <img id="discount" src="./discount.png" alt="Enjoy this discount!" width="100px" height="100px"/>
+                        <p>Use the code: 26ROSE</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>New Collection Drop In:</p>
+            <p id="timer"></p>
+            <p>New Arrivals</p>
+            <br/>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <br/>
+            <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="./Mens/26butterflybabybluepolo.jpg" alt="Men's 26 Butterfly Baby Blue and Maroon Polo Shirt" width="500px" height="500px"/>
+                    <div class="text">26 Butterfly Baby Blue and Maroon Polo Shirt</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="./Mens/26butterflyblackpolo.jpg" alt="Men's 26 Butterfly Black and Signature Purple Polo Shirt" width="500px" height="500px"/>
+                    <div class="text">26 Butterfly Black and Signature Purple Polo Shirt</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="./Mens/26butterflyroyalbluepolo.jpg" alt="Men's 26 Butterfly Royal Blue and Pink Polo Shirt" width="500px" height="500px"/>
+                    <div class="text">26 Butterfly Royal Blue and Pink Polo Shirt</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="./Mens/26butterflygraypolo.jpg" alt="Men's 26 Butterfly Gray and Crimson Polo Shirt" width="500px" height="500px"/>
+                    <div class="text">26 Butterfly Gray and Crimson Polo Shirt</div>
+                </div>
+            </div>
+
+            
+        </main>
+
+        <footer>
+            <hr/>
+            <div class="copyright">
+            Coded, designed, and hosted by Oscar Cerino | Rosemary Pine &copy; 2021. | All Rights Reserved
+            </div>
+        </footer>
+
+       
+        
+
+        <script src="./RosemaryPine.js"></script>
+
+    </body>
+    
+</html>
