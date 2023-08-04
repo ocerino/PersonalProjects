@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rosemary Pine</title>
+        <link rel="icon" href="../../cropped-Rosemary-Pine-Logo-3-pixel-version-1.png">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" href="../../RosemaryPineStylesheet.css"/>
+    </head>
+
+<body>
+    <header>
+        <div id="navbar" class="main-nav">
+            <ul>
+                <li id="home" class="home">
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li id="mens" class="mens-nav">
+                    <a href="../Mens.html">Men's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="../Mens-Clothing.html">Men's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="Mens-Tops.html">Men's Tops</a>
+                                </li>
+                                <li>
+                                    <a href="Mens-Bottoms.html">Men's Bottoms</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="womens" class="women's-nav">
+                    <a href="../../Womens/Womens.html">Women's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="../../Womens/Womens-Clothing.html">Women's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="../../Womens/Womens-Clothing/Womens-Tops.html">Women's Tops</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../Womens/Womens-Accessories.html">Women's Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="policies" class="policies">
+                    <a href="../../Policies.html">Policies</a>
+                </li>
+                <li>
+                    <a href="../../Contact-Us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>Rosemary Pine</h1>
+        <img src="../../cropped-cropped-Rosemary-Pine-Logo-3-pixel.png" alt="Rosemary Pine Logo"/>
+        <div class="popUpBannerBox"> 
+            <div class="popUpBannerInner">
+                <div class="popUpBannerContent"> 
+                    <p><a href="#" class="closeButton">Close X</a></p>
+                    <h2>Enjoy this discount!</h2>
+                    <br/>
+                    <img src="../../discount.png" alt="Enjoy this discount!" width="100px" height="100px"/>
+                    <p>Use the code: 26ROSE</p>
+                </div>
+            </div>
+        </div>
+        <p>New Collection Drop In:</p>
+        <p id="timer"></p>
+        <h2>Men's Bottoms</h2>
+        <ul>
+            <li>
+                <a href="26butterflybabybluesweats.html">
+                    <img src="26butterflybabybluesweats.png" alt="Men's 26 Butterfly Baby Blue and Maroon Sweatpants"/>
+                    <p>26 Butterfly Baby Blue and Maroon Sweatpants</p>
+                </a>
+            </li>
+            <li>
+                <a href="26butterflyblacksweats.html">
+                    <img src="26butterflyblacksweats.png" alt="Men's 26 Butterfly Black and Signature Purple Sweatpants"/>
+                    <p>26 Butterfly Black and Signature Purple Sweatpants</p>
+                </a>
+            </li>
+            <li>
+                <a href="26butterflyroyalbluesweats.html">
+                    <img src="26butterflyroyalbluesweats.png" alt="Men's 26 Butterfly Royal Blue and Pink Sweatpants"/>
+                    <p>26 Butterfly Royal Blue and Pink Sweatpants</p>
+                </a>
+            </li>
+            <li>
+                <a href="26butterflygraysweats.html">
+                    <img src="26butterflygraysweats.png" alt="Men's 26 Butterfly Gray and Crimson Sweatpants"/>
+                    <p>26 Butterfly Gray and Crimson Sweatpants</p>
+                </a>
+            </li>
+        </ul><br/>
+    </main>
+    <footer>
+        <hr/>
+        <div class="copyright">
+        Rosemary Pine &copy; 2021. All Rights Reserved
+        </div>
+    </footer>
+
+    <script>
+        //hide nav bar when scrolling down and show when scrolling up
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-500px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+
+
+            //show pop up banner after 2 seconds
+	        function showPopUpBanner() {
+		        $('.popUpBannerBox').fadeIn("2000");
+	        }
+	        setTimeout(showPopUpBanner, 3000);
+
+            //close pop up box
+	        $('.popUpBannerBox').click(function(e) {
+		        if ( !$(e.target).is('.popUpBannerContent, .popUpBannerContent *' ) ) {
+			        $('.popUpBannerBox').fadeOut("2000");
+			        return false;
+		        }
+	        });
+            
+            
+            $('.closeButton').click(function() {
+                $('.popUpBannerBox').fadeOut("2000");
+                return false;
+            });
+
+            // Set the date we're counting down to
+            var countDownDate = new Date("Jan 6, 2022 22:26:26").getTime();
+
+            // Update the countdown every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+                
+            // Find the distance between now and the countdown date
+            var distance = countDownDate - now;
+                
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+            // Output the result in an element with id="timer"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+                
+            // If the countdown is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+            document.getElementById("demo").innerHTML = "Our New Collection is Here!";
+            }
+            }, 1000);
+            
+    </script>
+</body>
+</html>

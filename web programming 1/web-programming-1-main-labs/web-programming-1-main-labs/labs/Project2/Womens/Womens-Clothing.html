@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rosemary Pine</title>
+        <link rel="icon" href="../cropped-Rosemary-Pine-Logo-3-pixel-version-1.png">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+        <style>
+            
+            body {font-family: Verdana, sans-serif; margin:0}
+            main{padding: 15%;}
+            p{text-align: center;}
+
+            #navbar {
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: block;
+            transition: top 0.3s;
+            }
+
+            #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 17px;
+            }
+
+            #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            }
+
+            .popUpBannerBox {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #FFF;
+            z-index: 9999;
+            display: none;
+        } 
+        .popUpBannerInner {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .popUpBannerContent {
+            position: fixed;
+            top: 150px;
+        }
+
+        </style>
+    </head>
+    <body>
+    <header>
+        <nav id="navbar" class="main-nav">
+            <ul>
+                <li id="home" class="home">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li id="men's" class="men's-nav">
+                    <a href="../Mens/Mens.html">Men's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="../Mens/Mens-Clothing.html">Men's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="../Mens/Mens-Clothing/Mens-Tops.html">Men's Tops</a>
+                                </li>
+                                <li>
+                                    <a href="../Mens/Mens-Clothing/Mens-Bottoms.html">Men's Bottoms</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="womens" class="womens-nav">
+                    <a href="Womens.html">Women's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="Womens-Clothing.html">Women's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="Womens-Clothing/Womens-Tops.html">Women's Tops</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Womens-Accessories.html">Women's Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="policies" class="policies">
+                    <a href="../Policies.html">Policies</a>
+                </li>
+                <li>
+                    <a href="../Contact-Us.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+        <h1>Rosemary Pine</h1>
+        <img src="../cropped-cropped-Rosemary-Pine-Logo-3-pixel.png" alt="Rosemary Pine Logo"/>
+        <div class="popUpBannerBox"> 
+            <div class="popUpBannerInner">
+                <div class="popUpBannerContent"> 
+                    <p><a href="#" class="closeButton">Close X</a></p>
+                    <h2>Enjoy this discount!</h2>
+                    <br/>
+                    <img src="../discount.png" alt="Enjoy this discount!" width="100px" height="100px"/>
+                    <p>Use the code: 26ROSE</p>
+                </div>
+            </div>
+        </div>
+        <p>New Collection Drop In:</p>
+        <p id="timer"></p>
+        <h2>Women's Clothing</h2>
+        <ul>
+            <li>
+                <a href="Womens-Clothing/Womens-Tops.html">Women's Tops</a>
+            </li>
+            <li>
+                <a href="Womens-Clothing/Womens-Bottoms.html">Women's Bottoms</a>
+            </li>
+        </ul><br/>
+    
+    <footer>
+        <hr/>
+        <div class="copyright">
+        Rosemary Pine &copy; 2021. All Rights Reserved
+        </div>
+    </footer>
+    <script>
+        //hide nav bar when scrolling down and show when scrolling up
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-500px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+
+
+            //show pop up banner after 2 seconds
+	        function showPopUpBanner() {
+		        $('.popUpBannerBox').fadeIn("2000");
+	        }
+	        setTimeout(showPopUpBanner, 3000);
+
+            //close pop up box
+	        $('.popUpBannerBox').click(function(e) {
+		        if ( !$(e.target).is('.popUpBannerContent, .popUpBannerContent *' ) ) {
+			        $('.popUpBannerBox').fadeOut("2000");
+			        return false;
+		        }
+	        });
+            
+            
+            $('.closeButton').click(function() {
+                $('.popUpBannerBox').fadeOut("2000");
+                return false;
+            });
+
+            // Set the date we're counting down to
+            var countDownDate = new Date("Jan 6, 2022 22:26:26").getTime();
+
+            // Update the countdown every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+                
+            // Find the distance between now and the countdown date
+            var distance = countDownDate - now;
+                
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+            // Output the result in an element with id="timer"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+                
+            // If the countdown is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+            document.getElementById("demo").innerHTML = "Our New Collection is Here!";
+            }
+            }, 1000);
+            
+    </script>
+</body>
+</html>

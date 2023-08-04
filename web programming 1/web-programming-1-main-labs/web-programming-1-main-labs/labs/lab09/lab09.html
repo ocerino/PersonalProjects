@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Lab 9  Complex JavaScript Objects, the Browser Object, and JavaScript Events</title> 
+    </head>
+
+<body>
+
+    <h1>JavaScript Complex Objects</h1>
+    <p>When you click "Try it!", a function(myFunction) will be called.</p>
+    <p>The function will do some internal work and display a 2 different message boxes on the webpage.</p>
+    <button onclick="myFunction()">Try it!</button>
+    
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script type="text/javascript">
+    
+
+    class Person
+    {
+        constructor(firstName, lastName, age)
+        {
+            this.firstName= firstName
+            this.lastName= lastName
+            this.age = age
+            this.interests= ["videogames", "music"],
+            this.eyeColor="dark brown"
+        }
+
+        greeting()
+        {
+            window.alert('Hi! I\'m ' + this.firstName
+            + ' and I\'m ' + this.age +' years old!');
+        }
+    }
+
+    function myFunction() {
+        
+
+        var person = {
+        name : {first: 'Oscar', last: 'Cerino'},
+        age: 21,
+        interests: ['videogames', 'music'],
+        eyeColor: 'black',
+        greeting: function()
+            {
+                window.confirm('Hi! I\'m ' + this.name.first
+                + ' and I\'m ' + this.age +' years old!');
+            }
+        };
+
+        var test1 = Object.create(person);
+        var test2 = new Person('Oscar', 'Cerino', 22);
+        
+        test1["eyeColor"] = 'dark Brown';
+
+
+        document.getElementById("demo1").innerHTML =
+        test1.name.first +" " + test1.name.last + " is " + test1.age + " years old and has " + test1.eyeColor + " eyes.";
+
+        test1.greeting();
+        test2.greeting();
+
+    }
+
+    window.onmouseup=myFunction();
+    window.addEventListener("onmousedown",myFunction());
+
+    </script>
+</body>
+</html>

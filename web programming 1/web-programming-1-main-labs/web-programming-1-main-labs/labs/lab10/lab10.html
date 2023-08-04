@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title> Lab 10 JavaScript DOM Manipulation, and Introduction to jQuery</title> 
+    </head>
+
+<body>
+
+    <h1>JavaScript DOM Manipulation, and Introduction to jQuery</h1>
+    <p id="demo"></p>
+    <input/>
+    <input/>
+    <input/>
+    <input/>
+    <script>
+        $(document).ready(function() { 
+            var tempText = document.getElementById("demo");
+            tempText.innerHTML="This is sample text. The DOM is now loaded and can be manipulated.";
+
+            var inputs = document.getElementsByTagName("input")
+            var temp;
+            for(var i =0; i<inputs.length;i++)
+            {
+                temp = inputs[i];
+                temp.setAttribute("title","input"+i);
+            }
+
+            var paragraphs = document.querySelectorAll("p");
+            
+            var newParagraph = document.createElement("p");
+            var newDiv = document.createElement("div");
+            var sampleText = document.createTextNode("This is some more sample text");
+
+            tempText.appendChild(newParagraph);
+            newParagraph.appendChild(sampleText);
+            newParagraph.insertBefore(newDiv, sampleText);
+
+            $( ":header" ).addClass("header");
+            $("#demo").addClass("paragraph");
+
+
+        }); 
+
+    </script>
+</body>
+</html>

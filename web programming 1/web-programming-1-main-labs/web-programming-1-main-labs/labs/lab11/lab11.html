@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Lab 11 ES6 JavaScript</title> 
+        <script type="module"> 
+            import {Lab11} from './lab11.js';
+            window.test = new Lab11();
+        </script>
+         <script>
+            function myfunction()
+            {
+                console.log(test.testDefaultParameters(1));
+                console.log(test.testTemplateLiterals("Oscar", "" ,"Cerino"));
+                console.log(test.testMultilineStrings());
+                console.log(test.testSortWithArrowFunction([1,2,3,4,5]));
+            }
+    </script>
+    </head>
+
+<body>
+
+    <h1>JavaScript Complex Objects</h1>
+    <p>this is a js example check the console</p>
+   
+    <button type="button" onclick="myfunction()">Try me!</button>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rosemary Pine</title>
+        <link rel="icon" href="./cropped-Rosemary-Pine-Logo-3-pixel-version-1.png">
+
+    </head>
+
+<body>
+    <header>
+        <nav id="primary-menus" class="main-nav">
+            <ul>
+                <li id="home" class="home">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li id="men's" class="men's-nav">
+                    <a href="./Men's/Men's.html">Men's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="./Men's/Men's-Clothing.html">Men's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./Men's/Men's-Clothing/Men's-Tops.html">Men's Tops</a>
+                                </li>
+                                <li>
+                                    <a href="./Men's/Men's-Clothing/Men's-Bottoms.html">Men's Bottoms</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="women's" class="women's-nav">
+                    <a href="./Women's/Women's.html">Women's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="./Women's/Women's-Clothing.html">Women's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./Women's/Women's-Clothing/Women's-Tops.html">Women's Tops</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./Women's/Women's-Accessories.html">Women's Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="policies" class="policies">
+                    <a href="Policies.html">Policies</a>
+                </li>
+                <li>
+                    <a href="Contact-Us.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Rosemary Pine</h1>
+        <img src="./cropped-cropped-Rosemary-Pine-Logo-3-pixel.png" alt="Rosemary Pine Logo"/>
+        <h2>Contact Us</h2>
+        <form action="./contact-us.php" method="POST" class="contact-us-form">
+            <!--could use action as mailto:26magnificence@gmail.com for actual email but will use non-existent php file that would do the same-->
+            <fieldset>
+              <legend>Send us an email</legend>
+          
+              <label for="name">Your Name:
+                <input type="text" id="name" name="Your Name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </label><br/>
+
+              <label for="email">Your Email:
+                <input type="email" id="email" name="Your Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </label><br/>
+
+              <label for="subject">Subject:
+                <input type="text" id="subject" name="Your Subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </label><br/>
+              <label for="message">Message:
+                <textarea id="message" name="Your Message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+              </label><br/>
+              <button type="submit">Send Your Email</button>
+            </fieldset>
+          </form>
+    </main>
+
+    <footer>
+        <div class="copyright">
+        Rosemary Pine &copy; 2021. All Rights Reserved
+        </div>
+    </footer>
+</body>
+</html>

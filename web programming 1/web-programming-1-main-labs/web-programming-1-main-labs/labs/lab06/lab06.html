@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Lab 6 Forms</title> 
+    </head>
+
+<body>
+    <form action="/form-handler" method="post">
+      <!-- radio buttons -->
+        <label>Checkbox:    
+            <input type="checkbox" name="checkbox" id="checkbox">
+        </label> 
+        <label>Radio:    
+            <input type="radio" name="radiocolor1" id="radioblue">
+        </label>
+        <label>Text:    
+            <input type="Text" name="text" id="text">
+        </label>
+        <label>Telephone:    
+            <input type="tel" name="phone" id="phone" placeholder="123-456-6789">
+        </label><br/>
+    
+    <select name="SampleSelect" size="3" multiple>
+        <option>Test 1</option>
+        <option>Test 2</option>
+        <option>Test 3</option>
+        <option>Test 4</option>
+        <option>Test 5</option>
+    </select><br/>
+    <textarea name="SampleTextArea">This is a sample text area</textarea><br/>
+    <button type="submit">Submit your form!</button>
+    <button type="reset">Reset your form!</button>
+    </form>
+</body>
+
+</html>

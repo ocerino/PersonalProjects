@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Lab 8 Intro to JavaScript</title> 
+    </head>
+
+<body>
+
+    <h1>JavaScript Objects</h1>
+    <p>When you click "Try it!", a function(myFunction) will be called.</p>
+    <p>The function will do some internal work on the console and display a message on the webpage.</p>
+    <button onclick="myFunction()">Try it!</button>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+    function myFunction() {
+        var x = 5;
+        var i;
+        var isEqual = false;
+        var testArray = new Array(5)
+
+        for(i=0;i<x;i++)
+        {
+            testArray[i]=x+i;
+        }
+
+        for (const element of testArray) {
+        console.log(element);
+        }
+
+        var equalPos;  
+        
+        while (isEqual == false)
+        {
+            let x = 7;
+            for(i=0;i<5;i++)
+            {
+                if(testArray[i]==x)
+                {
+                    isEqual = true;
+                    equalPos = i;
+                    console.log("The array is equal to x at position " + equalPos);
+                }
+            } 
+        }
+        
+
+        var person = {
+        firstName : "Oscar",
+        lastName  : "Cerino",
+        age     : 21,
+        eyeColor  : "dark brown"
+        };
+
+        document.getElementById("demo").innerHTML =
+        person.firstName +" " + person.lastName + " is " + person.age + " years old and has " + person.eyeColor + " eyes.";
+    }
+    </script>
+</body>
+</html>

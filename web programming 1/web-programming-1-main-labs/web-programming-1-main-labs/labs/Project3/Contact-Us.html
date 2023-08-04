@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rosemary Pine</title>
+        <link rel="icon" href="./cropped-Rosemary-Pine-Logo-3-pixel-version-1.png">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <link rel="stylesheet" href="./RosemaryPineStylesheet.css"/>
+    </head>
+
+<body>
+    <header>
+        <div id="navbar" class="main-nav">
+            <ul>
+                <li id="home" class="home">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li id="mens" class="mens-nav">
+                    <a href="./Mens/Mens.html">Men's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="./Mens/Mens-Clothing.html">Men's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./Mens/Mens-Clothing/Mens-Tops.html">Men's Tops</a>
+                                </li>
+                                <li>
+                                    <a href="./Mens/Mens-Clothing/Mens-Bottoms.html">Men's Bottoms</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li id="womens" class="womens-nav">
+                    <a href="./Womens/Womens.html">Women's</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="./Womens/Womens-Clothing.html">Women's Clothing</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./Womens/Womens-Clothing/Womens-Tops.html">Women's Tops</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./Womens/Womens-Accessories.html">Women's Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="policies" class="policies">
+                    <a href="Policies.html">Policies</a>
+                </li>
+                <li>
+                    <a href="Contact-Us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>Rosemary Pine</h1>
+        <img src="./cropped-cropped-Rosemary-Pine-Logo-3-pixel.png" alt="Rosemary Pine Logo"/>
+        <div class="popUpBannerBox"> 
+            <div class="popUpBannerInner">
+                <div class="popUpBannerContent"> 
+                    <p><a href="#" class="closeButton">Close X</a></p>
+                    <h2>Enjoy this discount!</h2>
+                    <br/>
+                    <img src="./discount.png" alt="Enjoy this discount!" width="100px" height="100px"/>
+                    <p>Use the code: 26ROSE</p>
+                </div>
+            </div>
+        </div>
+        <p>New Collection Drop In:</p>
+        <p id="timer"></p>
+        <h2>Contact Us</h2>
+        <form action="./contact-us.php" method="POST" class="contact-us-form">
+            <!--could use action as mailto:26magnificence@gmail.com for actual email but will use non-existent php file that would do the same-->
+            <fieldset>
+              <legend>Send us an email</legend>
+          
+              <label for="name">Your Name:
+                <input type="text" id="name" name="Your Name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </label><br/>
+
+              <label for="email">Your Email:
+                <input type="email" id="email" name="Your Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </label><br/>
+
+              <label for="subject">Subject:
+                <input type="text" id="subject" name="Your Subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+              </label><br/>
+              <label for="message">Message:
+                <textarea id="message" name="Your Message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
+              </label><br/>
+              <button type="submit">Send Your Email</button>
+            </fieldset>
+          </form>
+    </main>
+
+    <footer>
+        <div class="copyright">
+        Rosemary Pine &copy; 2021. All Rights Reserved
+        </div>
+    </footer>
+
+    <script>
+        //hide nav bar when scrolling down and show when scrolling up
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-500px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+
+
+            //show pop up banner after 2 seconds
+	        function showPopUpBanner() {
+		        $('.popUpBannerBox').fadeIn("2000");
+	        }
+	        setTimeout(showPopUpBanner, 3000);
+
+            //close pop up box
+	        $('.popUpBannerBox').click(function(e) {
+		        if ( !$(e.target).is('.popUpBannerContent, .popUpBannerContent *' ) ) {
+			        $('.popUpBannerBox').fadeOut("2000");
+			        return false;
+		        }
+	        });
+            
+            
+            $('.closeButton').click(function() {
+                $('.popUpBannerBox').fadeOut("2000");
+                return false;
+            });
+
+            // Set the date we're counting down to
+            var countDownDate = new Date("Jan 6, 2022 22:26:26").getTime();
+
+            // Update the countdown every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+                
+            // Find the distance between now and the countdown date
+            var distance = countDownDate - now;
+                
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+            // Output the result in an element with id="timer"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+                
+            // If the countdown is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+            document.getElementById("demo").innerHTML = "Our New Collection is Here!";
+            }
+            }, 1000);
+            
+    </script>
+</body>
+</html>

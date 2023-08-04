@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Lab 13 More CSS Text Formatting</title> 
+
+        <style>
+            h1{
+                font:bold italic xx-large Verdana;
+                
+            }
+            h1 + p {
+                font-variant: small-caps;
+                line-height:  2;
+                text-indent: 10%;
+                text-align: center;
+                word-spacing: 3em;
+                text-decoration:overline wavy orchid;
+                text-transform: capitalize;
+            }
+            ul li{
+                font-variant: small-caps;
+                list-style-type: lower-greek;
+                list-style-image: linear-gradient(to left bottom, red, blue);
+                text-decoration:underline orchid;
+                text-transform: uppercase;
+            }
+            .outer{
+                font-size: 1.5em
+            }
+            .inner{
+                color:chocolate;
+                
+            }
+            #demo{
+                color:rgba(125, 23, 67, 0.6);
+                background-color: #CC00FF;
+                text-shadow: 3px 3px black;
+                opacity: 0.5;
+            }
+
+        </style>
+
+
+    </head>
+
+<body>
+
+    <h1 id="demo">More CSS Text Formatting</h1>
+    <p>this is some sample text</p>
+    <ul>
+        <li class="outer">This is a sample list</li>
+        <ul>
+            <li class = "inner">This is a sample list</li>
+            <ul>
+                <li>This is a sample list</li>
+            </ul>
+        </ul>
+        <li class="outer">This is a sample list</li>
+    </ul>
+   
+    
+</body>
+</html>

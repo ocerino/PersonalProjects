@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Lab 7 Regular Expressions and APIs</title> 
+    </head>
+
+<body>
+<h1>Lab 7</h1><br/>
+
+<h2>Form</h2>
+<form action="/formhandler" method="POST">
+    <label>Telephone:    
+    <input type='tel' name="phone" id="phone" pattern='[\(]\d{3}[\)]\d{3}[\-]\d{4}' title='Phone Number Format: +(999)999-9999' placeholder="(123)456-6789">
+    </label><br/>
+    <label>Cats or Dogs:    
+        <input type="text" name="text" id="text" pattern='\b(cats+|dogs+)\b' title='Enter either cats or dogs'>
+    </label><br/>
+    <button type="submit">Submit your form!</button>
+    <button type="reset">Reset your form!</button>
+</form>
+
+<h2>Michael Jackson - Rock With You</h2>
+<video src="MichaelJackson-RockWithYou(OfficialVideo).mp4" width="500" height="380" poster="RockWithYou.jpg" controls>
+Michael Jackson - Rock With You
+</video><br/>
+
+<h2>Al Green - Let's Stay Together</h2>
+<audio src="AlGreen-Let'sStayTogether.mp3" controls>
+Al Green - Let's Stay Together
+</audio><br/>
+
+<h2>HTML/Javascript Canvas</h2>
+<canvas width="600" height="400" id="my_first_canvas">Your browser doesn't support HTML5 canvas. Try using Chrome, Firefox, Safari, or MS Edge</canvas>
+<script type="text/javascript">
+    window.addEventListener('load', eventWindowLoaded, false);
+    function eventWindowLoaded() {        
+    canvasApp();    
+    }    
+    function canvasApp() {       
+        var theCanvas = document.getElementById('my_first_canvas');       
+        var my_canvas = theCanvas.getContext('2d');       
+        my_canvas.fillStyle = "black"; // switch to black for text fill
+        my_canvas.font = '20px _sans'; // use 20 pixel sans serif font
+        my_canvas.fillText ("Hello World!", 45, 200); // write text
+    }
+    </script>
+
+</body>
+
+</html>

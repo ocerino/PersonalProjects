@@ -1,0 +1,81 @@
+body:first-child{
+    font:bold italic x-large Verdana;      
+}
+
+body{
+    background-image: url(cherryblossoms.jpg);
+    background-position: center;
+    background-repeat:round;
+    background-attachment: scroll;
+    overflow: scroll;
+}
+
+a:link{
+    color:darkblue;
+}
+a:hover{
+    color:darkmagenta;
+}
+a[href="google.com"]{
+    border-style: groove;
+    border-width: 5%;
+    border-color: gold;
+    border-radius: 50px;
+    border-image: url(border-image-6.svg) 42 fill/ 42px/ 0px stretch;
+}
+        
+ul{
+    background: bisque;
+}
+
+h1 + p {
+    background: bisque;
+    padding: 5%;
+    line-height:  2;
+    text-indent: 10%;
+    text-align: center;
+    word-spacing: 3em;
+    text-decoration:overline wavy orchid;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+}
+
+p::first-letter{
+    font-size: 200%;
+}
+
+p:before{
+    content:"This has been inserted before by css! ";
+}
+
+li:first-of-type{
+    font-variant: small-caps;
+    list-style-type: lower-greek;
+    list-style-image: linear-gradient(to left bottom, red, blue);
+    text-decoration:underline orchid;
+    text-transform: uppercase;
+    box-sizing: content-box;
+    width: max-content;
+    height: max-content;
+}
+
+.outer{
+    font-size: 1.5em
+}
+
+li[title]{
+    color:chocolate;   
+}
+
+#demo{
+    color:rgba(125, 23, 67, 0.6);
+    background-color: #CC00FF;
+    text-shadow: 3px 3px black;
+    opacity: 0.5;            
+}
+
+
+
+
