@@ -1,0 +1,50 @@
+select 'Q1' as ' ' ;
+-- (1) Find all info about managers who are 26 or younger and live in CA
+
+select 'Q2' as ' ' ;
+-- (2) Find the name and salary of managers who earn less than 35000
+
+
+select 'Q3' as ' ' ;
+-- (3) Find the eid and startDate of managers who started working before Feb 1, 2021
+-- i.e., startDate < "20121-02-01"
+
+select 'Q4' as ' ' ;
+-- (4) Find the name of the employee who manages the "department40" department
+
+
+select 'Q5' as ' ' ;
+-- (5) Find the eid of employees who work in exactly 3 departments 
+-- Hint: use aggregates/group by/having
+
+
+select 'Q6' as ' ' ;
+-- (6) Find the eid, residenceState, and did for all those 20 year old
+-- employees that work in a departtment located in the same state that they live in.
+
+
+select 'Q7' as ' ' ;
+-- (7) Find the eid, residence state, did, and department state
+-- for every managers who manages a department located in AK
+
+select 'Q8' as ' ' ;
+-- (8) Find the eid, residence state, did, and deparment state for
+-- every employee that works for a department located in CO
+
+
+
+select 'Q9' as ' ' ;
+-- (Q9) find the eid of employees who are managing two or more departments
+
+select 'Q10' as ' ' ;
+-- (Q10) find eid, did, and manging starting date for all employees found in the previous problem
+-- Hint: use "in" and a nested query
+
+select 'Q11' as ' ' ;
+-- (11) find the did and number of empolyees for every department with 14 or fewer employees
+
+
+-- (12) Find the average employee salary for each department whose did is < 6.  
+-- In other words, for each of those departments find the average salary of employees
+-- who work for that department
+

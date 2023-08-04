@@ -1,0 +1,105 @@
+Single update:
+>db.thePeople.find({pid:10})
+{ "_id" : ObjectId("604d9baf3892e7c48b599997"), "pid" : 10, "firstName" : "Jeffrey", "MI" : "K", "lastName" : "Sato", "state" : "VT", "age" : 40, "birth" : 1979, "salary" : 97473, "numChildren" : 3, "children" : [ "Sofia V Sato", "Neha S Sato", "Amit I Sato" ], "weight" : 59, "height" : 181 }
+
+>db.thePeople.updateOne({'pid':10},{'$mul':{'salary':1.2}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+> db.thePeople.find({pid:10})
+{ "_id" : ObjectId("604d9b400cf00eb926a5acc7"), "pid" : 10, "firstName" : "Jeffrey", "MI" : "K", "lastName" : "Sato", "state" : "VT", "age" : 40, "birth" : 1979, "salary" : 116967.59999999999, "numChildren" : 3, "children" : [ "Sofia V Sato", "Neha S Sato", "Amit I Sato" ], "weight" : 59, "height" : 181 }..
+
+
+
+Multiple update:
+db.thePeople.find( {"salary": {"$gt":99500}},{"_id":0,"name":1,"salary":1} )
+{ "salary" : 112529 }
+{ "salary" : 120719 }
+{ "salary" : 116967.59999999999 }
+{ "salary" : 123266 }
+{ "salary" : 116739 }
+{ "salary" : 122442 }
+{ "salary" : 106036 }
+{ "salary" : 103098 }
+{ "salary" : 121771 }
+{ "salary" : 106671 }
+{ "salary" : 127330 }
+{ "salary" : 129542 }
+{ "salary" : 123220 }
+{ "salary" : 127121 }
+{ "salary" : 106003 }
+{ "salary" : 115663 }
+{ "salary" : 123868 }
+{ "salary" : 100201 }
+{ "salary" : 105100 }
+{ "salary" : 126508 }
+Type "it" for more
+
+db.thePeople.updateMany({'salary':{$gt:99500}},{'$mul':{'salary':1.2}})
+{ "acknowledged" : true, "matchedCount" : 601, "modifiedCount" : 601 }
+
+
+db.thePeople.find( {"salary": {"$gt":99500}},{"_id":0,"name":1,"salary":1} )
+{ "salary" : 135034.8 }
+{ "salary" : 144862.8 }
+{ "salary" : 140361.12 }
+{ "salary" : 147919.19999999998 }
+{ "salary" : 140086.8 }
+{ "salary" : 146930.4 }
+{ "salary" : 127243.2 }
+{ "salary" : 123717.59999999999 }
+{ "salary" : 146125.19999999998 }
+{ "salary" : 128005.2 }
+{ "salary" : 152796 }
+{ "salary" : 155450.4 }
+{ "salary" : 147864 }
+{ "salary" : 152545.19999999998 }
+{ "salary" : 127203.59999999999 }
+{ "salary" : 138795.6 }
+{ "salary" : 148641.6 }
+{ "salary" : 120241.2 }
+{ "salary" : 126120 }
+{ "salary" : 151809.6 }
+Type "it" for more
+
+Multiple delete:
+
+db.thePeople.find( {"salary": {"$gt":155000}},{"_id":0,"name":1,"salary":1} )
+{ "salary" : 155450.4 }
+{ "salary" : 155419.19999999998 }
+{ "salary" : 155946 }
+{ "salary" : 155264.4 }
+{ "salary" : 155780.4 }
+{ "salary" : 155882.4 }
+{ "salary" : 155146.8 }
+{ "salary" : 155196 }
+{ "salary" : 155487.6 }
+{ "salary" : 155697.6 }
+{ "salary" : 155774.4 }
+{ "salary" : 155532 }
+{ "salary" : 155509.19999999998 }
+{ "salary" : 155104.8 }
+{ "salary" : 155810.4 }
+{ "salary" : 155006.4 }
+{ "salary" : 155191.19999999998 }
+{ "salary" : 155334 }
+{ "salary" : 155031.6 }
+{ "salary" : 155448 }
+Type "it" for more
+
+ db.thePeople.deleteMany( {'salary':{"$gt":155000} } )
+{ "acknowledged" : true, "deletedCount" : 22 }
+
+db.thePeople.find( {"salary": {"$gt":154000}},{"_id":0,"name":1,"salary":1} ) (note that there are no salaries above 155000)
+{ "salary" : 154774.8 }
+{ "salary" : 154140 }
+{ "salary" : 154188 }
+{ "salary" : 154980 }
+{ "salary" : 154993.19999999998 }
+{ "salary" : 154989.6 }
+{ "salary" : 154995.6 }
+{ "salary" : 154742.4 }
+{ "salary" : 154254 }
+{ "salary" : 154015.19999999998 }
+{ "salary" : 154372.8 }
+{ "salary" : 154906.8 }
+{ "salary" : 154521.6 }

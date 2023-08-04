@@ -1,0 +1,16 @@
+use a5;
+select * from Manages M, Employee E where M.eid=E.eid and E.age<=26 and residenceState='CA';
+select E.name, E.salary from Manages M, Employee E where M.eid=E.eid and E.salary<35000;
+select 'Robert''s version';
+select M.eid, M.dateStartedManaging from Manages M where M.dateStartedManaging<'2021-02-01';
+select 'Oscar''s version';
+select M.eid, W.startDate from Manages M, WorksFor W where W.startDate < "2021-02-01" and W.eid=M.eid;
+select E.name from Manages M, Employee E, Department D where D.name="department40" and M.eid=E.eid and M.did=D.did;
+select E.eid from Employee E, Department D, WorksFor W where E.eid=W.eid and D.did=W.did group by E.eid having count(*)=3 order by W.did;
+select E.eid, E.residenceState, D.did from Employee E, Department D, WorksFor W where E.eid=W.eid and D.did=W.did and E.age=20 and E.residenceState=D.stateLocated;
+select E.eid, E.residenceState, D.did, D.stateLocated from Employee E, Department D, Manages M where E.eid=M.eid and D.did=M.did and D.stateLocated='AK';
+select E.eid, E.residenceState, D.did, D.stateLocated from Employee E, Department D, WorksFor W where E.eid=W.eid and D.did=W.did and D.stateLocated='CO';
+select M.eid from Manages M group by M.eid having count(*)>=2;
+select * from Manages M where M.eid in (select M.eid from Manages M group by M.eid having count(*)>=2);
+select D.did, count(*) from Department D, WorksFor W where D.did=W.did group by D.did having count(*)<=14 order by D.did;
+select D.did, avg(E.salary) from Employee E, Department D, WorksFor W where D.did<6 and D.did=W.did and E.eid=W.eid group by D.did order by D.did;

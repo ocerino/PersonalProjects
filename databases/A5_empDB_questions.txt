@@ -1,0 +1,223 @@
+select 'Q1' as ' ' ;
+-- (1) Find all info about managers who are 26 or younger and live in CA
+
+select * from Manages M, Employee E where M.eid=E.eid and E.age<=26 and residenceState='CA';
++-----+-----+---------------------+-----+----------+-----+--------+----------------+------------+
+| eid | did | dateStartedManaging | eid | name     | age | salary | residenceState | startDate  |
++-----+-----+---------------------+-----+----------+-----+--------+----------------+------------+
+| 545 |   1 | 2021-06-05          | 545 | Sally545 |  26 |  79069 | CA             | 2021-12-17 |
+|  85 |  14 | 2021-11-09          |  85 | Sally85  |  21 |  41759 | CA             | 2021-09-14 |
+| 411 |  17 | 2021-06-10          | 411 | Sally411 |  26 |  76422 | CA             | 2021-03-26 |
++-----+-----+---------------------+-----+----------+-----+--------+----------------+------------+
+3 rows in set (0.0006 sec)
+
+select 'Q2' as ' ' ;
+-- (2) Find the name and salary of managers who earn less than 35000
+
+select E.name, E.salary from Manages M, Employee E where M.eid=E.eid and E.salary<35000;
++----------+--------+
+| name     | salary |
++----------+--------+
+| Sally204 |  23408 |
+| Sally284 |  28465 |
+| Sally321 |  29538 |
+| Sally439 |  22562 |
+| Sally669 |  31113 |
+| Sally728 |  27451 |
+| Sally939 |  33751 |
++----------+--------+
+7 rows in set (0.0002 sec)
+
+select 'Q3' as ' ' ;
+-- (3) Find the eid and startDate of managers who started working before Feb 1, 2021
+-- i.e., startDate < "20121-02-01"
+
+ select M.eid, W.startDate from Manages M, WorksFor W where W.startDate < "2021-02-01" and W.eid=M.eid;
++-----+------------+
+| eid | startDate  |
++-----+------------+
+|   2 | 2021-01-24 |
+| 180 | 2021-01-08 |
+| 584 | 2021-01-20 |
+| 738 | 2021-01-07 |
+| 948 | 2021-01-13 |
+| 948 | 2021-01-13 |
++-----+------------+
+6 rows in set (0.0005 sec)
+
+select E.name, E.salary from Manages M, Employee E where M.eid=E.eid and E.salary<35000;
++----------+--------+
+| name     | salary |
++----------+--------+
+| Sally204 |  23408 |
+| Sally284 |  28465 |
+| Sally321 |  29538 |
+| Sally439 |  22562 |
+| Sally669 |  31113 |
+| Sally728 |  27451 |
+| Sally939 |  33751 |
++----------+--------+
+7 rows in set (0.0002 sec)
+
+ select M.eid, W.startDate from Manages M, WorksFor W where W.startDate < "2021-02-01" and W.eid=M.eid;
++-----+------------+
+| eid | startDate  |
++-----+------------+
+|   2 | 2021-01-24 |
+| 180 | 2021-01-08 |
+| 584 | 2021-01-20 |
+| 738 | 2021-01-07 |
+| 948 | 2021-01-13 |
+| 948 | 2021-01-13 |
++-----+------------+
+6 rows in set (0.0005 sec)
+
+select 'Q4' as ' ' ;
+-- (4) Find the name of the employee who manages the "department40" department
+
+select E.name from Manages M, Employee E, Department D where D.name="department40" and M.eid=E.eid and M.did=D.did;
++----------+
+| name     |
++----------+
+| Sally948 |
++----------+
+1 row in set (0.0004 sec)
+
+select 'Q5' as ' ' ;
+-- (5) Find the eid of employees who work in exactly 3 departments 
+-- Hint: use aggregates/group by/having
+
+select E.eid from Employee E, Department D, WorksFor W where E.eid=W.eid and D.did=W.did group by W.did having count(*)=3 order by W.did;
+NO ANSWER
+Empty set (0.0018 sec)
+
+select 'Q6' as ' ' ;
+-- (6) Find the eid, residenceState, and did for all those 20 year old
+-- employees that work in a departtment located in the same state that they live in.
+
+select E.eid, E.residenceState, D.did from Employee E, Department D, WorksFor W where E.eid=W.eid and D.did=W.did and E.age=20 and E.residenceState=D.stateLocated;
++-----+----------------+-----+
+| eid | residenceState | did |
++-----+----------------+-----+
+| 678 | HI             |  35 |
++-----+----------------+-----+
+1 row in set (0.0007 sec)
+
+select 'Q7' as ' ' ;
+-- (7) Find the eid, residence state, did, and department state
+-- for every managers who manages a department located in AK
+
+select E.eid, E.residenceState, D.did, D.stateLocated from Employee E, Department D, Manages M where E.eid=M.eid and D.did=M.did and D.stateLocated='AK';
++-----+----------------+-----+--------------+
+| eid | residenceState | did | stateLocated |
++-----+----------------+-----+--------------+
+| 247 | AZ             |  16 | AK           |
+| 618 | AZ             |  24 | AK           |
+|  46 | KY             |  44 | AK           |
++-----+----------------+-----+--------------+
+3 rows in set (0.0004 sec)
+
+select 'Q8' as ' ' ;
+-- (8) Find the eid, residence state, did, and deparment state for
+-- every employee that works for a department located in CO
+
+select E.eid, E.residenceState, D.did, D.stateLocated from Employee E, Department D, WorksFor W where E.eid=W.eid and D.did=W.did and D.stateLocated='CO';
++-----+----------------+-----+--------------+
+| eid | residenceState | did | stateLocated |
++-----+----------------+-----+--------------+
+|  76 | DE             |  41 | CO           |
+| 121 | FL             |  41 | CO           |
+| 168 | AZ             |  41 | CO           |
+| 254 | DE             |  41 | CO           |
+| 258 | ME             |  41 | CO           |
+| 283 | KY             |  41 | CO           |
+| 341 | HI             |  41 | CO           |
+| 346 | DE             |  41 | CO           |
+| 358 | KS             |  41 | CO           |
+| 367 | KS             |  41 | CO           |
+| 486 | AZ             |  41 | CO           |
+| 522 | IN             |  41 | CO           |
+| 529 | IN             |  41 | CO           |
+| 569 | FL             |  41 | CO           |
+| 673 | IA             |  41 | CO           |
+| 744 | CO             |  41 | CO           |
+| 815 | ID             |  41 | CO           |
+| 909 | CO             |  41 | CO           |
+| 930 | LA             |  41 | CO           |
+| 956 | IA             |  41 | CO           |
+| 968 | KY             |  41 | CO           |
+|  25 | HI             |  43 | CO           |
+|  67 | AZ             |  43 | CO           |
+|  98 | CO             |  43 | CO           |
+| 144 | AL             |  43 | CO           |
+| 332 | AK             |  43 | CO           |
+| 335 | LA             |  43 | CO           |
+| 438 | DE             |  43 | CO           |
+| 490 | DE             |  43 | CO           |
+| 510 | FL             |  43 | CO           |
+| 514 | IN             |  43 | CO           |
+| 622 | CT             |  43 | CO           |
+| 640 | CO             |  43 | CO           |
+| 660 | IA             |  43 | CO           |
+| 695 | AL             |  43 | CO           |
+| 732 | DE             |  43 | CO           |
+| 734 | CO             |  43 | CO           |
+| 787 | AZ             |  43 | CO           |
+| 841 | KS             |  43 | CO           |
+| 910 | ME             |  43 | CO           |
+| 978 | AZ             |  43 | CO           |
+| 995 | AZ             |  43 | CO           |
++-----+----------------+-----+--------------+
+42 rows in set (0.0003 sec)
+
+select 'Q9' as ' ' ;
+-- (Q9) find the eid of employees who are managing two or more departments
+
+select M.eid from Manages M having count(*)>=2;
++-----+
+| eid |
++-----+
+|   2 |
++-----+
+1 row in set (0.0002 sec)
+
+select 'Q10' as ' ' ;
+-- (Q10) find eid, did, and manging starting date for all employees found in the previous problem
+-- Hint: use "in" and a nested query
+
+select M.eid, M.did, M.dateStartedManaging from Manages M where M.eid in (select M2.eid from Manages M2 having count(*)>=2);
++-----+-----+---------------------+
+| eid | did | dateStartedManaging |
++-----+-----+---------------------+
+|   2 |  12 | 2021-08-20          |
++-----+-----+---------------------+
+1 row in set (0.0005 sec)
+select 'Q11' as ' ' ;
+-- (11) find the did and number of empolyees for every department with 14 or fewer employees
+
+select D.did, count(*) from Department D, WorksFor W where D.did=W.did group by D.did having count(*)<=14 order by D.did;
++-----+----------+
+| did | count(*) |
++-----+----------+
+|   1 |       11 |
+|   3 |       13 |
+|   8 |       14 |
+|  32 |       13 |
++-----+----------+
+4 rows in set (0.0005 sec)
+
+-- (12) Find the average employee salary for each department whose did is < 6.  
+-- In other words, for each of those departments find the average salary of employees
+-- who work for that department
+
+select D.did, avg(E.salary) from Employee E, Department D, WorksFor W where D.did<6 and D.did=W.did and E.eid=W.eid group by D.did order by D.did;
++-----+-------------------+
+| did | avg(E.salary)     |
++-----+-------------------+
+|   1 | 53461.09090909091 |
+|   2 | 50880.28571428572 |
+|   3 | 57662.38461538462 |
+|   4 | 51728.80952380953 |
+|   5 |             51007 |
++-----+-------------------+
+5 rows in set (0.0004 sec)

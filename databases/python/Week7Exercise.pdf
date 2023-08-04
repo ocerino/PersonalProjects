@@ -1,0 +1,498 @@
+insert into Reserve values (248,61,'2020-9-21');
+insert into Reserve values (436,33,'2020-3-3');
+insert into Reserve values (252,94,'2020-11-23');
+insert into Reserve values (291,100,'2020-5-13');
+insert into Reserve values (461,52,'2020-12-3');
+insert into Reserve values (93,91,'2020-5-28');
+insert into Reserve values (373,47,'2020-5-16');
+insert into Reserve values (416,47,'2020-2-11');
+insert into Reserve values (496,62,'2020-6-25');
+insert into Reserve values (258,72,'2020-3-4');
+insert into Reserve values (161,8,'2020-3-10');
+insert into Reserve values (145,25,'2020-5-16');
+insert into Reserve values (38,100,'2020-7-18');
+insert into Reserve values (44,64,'2020-4-10');
+insert into Reserve values (305,72,'2020-3-1');
+insert into Reserve values (321,28,'2020-2-11');
+insert into Reserve values (348,94,'2020-2-7');
+insert into Reserve values (307,30,'2020-11-28');
+insert into Reserve values (193,29,'2020-10-4');
+insert into Reserve values (115,76,'2020-8-17');
+insert into Reserve values (457,20,'2020-11-7');
+insert into Reserve values (378,50,'2020-6-9');
+insert into Reserve values (29,63,'2020-2-23');
+insert into Reserve values (426,78,'2020-3-11');
+insert into Reserve values (381,1,'2020-9-8');
+insert into Reserve values (36,67,'2020-11-13');
+insert into Reserve values (117,65,'2020-8-9');
+insert into Reserve values (22,32,'2020-5-25');
+insert into Reserve values (117,49,'2020-6-6');
+insert into Reserve values (1,49,'2020-5-16');
+insert into Reserve values (461,87,'2020-9-3');
+insert into Reserve values (493,27,'2020-3-16');
+insert into Reserve values (365,67,'2020-6-26');
+insert into Reserve values (1,21,'2020-5-19');
+insert into Reserve values (40,35,'2020-3-21');
+insert into Reserve values (210,76,'2020-5-13');
+insert into Reserve values (446,18,'2020-4-5');
+insert into Reserve values (392,78,'2020-1-18');
+insert into Reserve values (346,79,'2020-4-2');
+insert into Reserve values (35,57,'2020-10-28');
+insert into Reserve values (480,9,'2020-3-24');
+insert into Reserve values (305,13,'2020-1-6');
+insert into Reserve values (252,49,'2020-1-3');
+insert into Reserve values (20,61,'2020-8-3');
+insert into Reserve values (334,2,'2020-10-28');
+insert into Reserve values (223,56,'2020-6-13');
+insert into Reserve values (263,8,'2020-6-17');
+insert into Reserve values (433,91,'2020-11-22');
+insert into Reserve values (131,24,'2020-6-1');
+insert into Reserve values (210,1,'2020-5-15');
+insert into Reserve values (30,3,'2020-9-7');
+insert into Reserve values (98,76,'2020-10-24');
+insert into Reserve values (176,99,'2020-9-25');
+insert into Reserve values (471,99,'2020-12-26');
+insert into Reserve values (56,60,'2020-8-19');
+insert into Reserve values (86,35,'2020-9-2');
+insert into Reserve values (34,3,'2020-10-17');
+insert into Reserve values (118,2,'2020-11-22');
+insert into Reserve values (9,75,'2020-8-24');
+insert into Reserve values (157,98,'2020-2-20');
+insert into Reserve values (476,30,'2020-12-24');
+insert into Reserve values (406,19,'2020-5-17');
+insert into Reserve values (481,82,'2020-6-9');
+insert into Reserve values (128,4,'2020-1-2');
+insert into Reserve values (65,24,'2020-8-17');
+insert into Reserve values (396,69,'2020-5-10');
+insert into Reserve values (313,40,'2020-8-26');
+insert into Reserve values (90,39,'2020-3-23');
+insert into Reserve values (316,27,'2020-12-2');
+insert into Reserve values (85,97,'2020-11-23');
+insert into Reserve values (401,94,'2020-3-8');
+insert into Reserve values (370,76,'2020-6-8');
+insert into Reserve values (308,37,'2020-5-25');
+insert into Reserve values (471,65,'2020-10-25');
+insert into Reserve values (409,15,'2020-1-21');
+insert into Reserve values (255,60,'2020-6-18');
+insert into Reserve values (149,100,'2020-5-13');
+insert into Reserve values (428,67,'2020-9-12');
+insert into Reserve values (463,41,'2020-7-18');
+insert into Reserve values (261,100,'2020-11-2');
+insert into Reserve values (495,65,'2020-10-24');
+insert into Reserve values (412,34,'2020-8-11');
+insert into Reserve values (464,71,'2020-6-25');
+insert into Reserve values (456,57,'2020-5-8');
+insert into Reserve values (407,83,'2020-7-11');
+insert into Reserve values (437,75,'2020-6-26');
+insert into Reserve values (468,36,'2020-9-6');
+insert into Reserve values (429,53,'2020-12-9');
+insert into Reserve values (79,55,'2020-6-20');
+insert into Reserve values (323,13,'2020-11-15');
+insert into Reserve values (428,71,'2020-3-28');
+insert into Reserve values (3,33,'2020-10-24');
+insert into Reserve values (151,28,'2020-8-8');
+insert into Reserve values (428,60,'2020-4-22');
+insert into Reserve values (220,17,'2020-8-9');
+insert into Reserve values (171,3,'2020-9-2');
+insert into Reserve values (98,86,'2020-11-15');
+insert into Reserve values (399,29,'2020-5-8');
+insert into Reserve values (90,16,'2020-7-13');
+insert into Reserve values (153,32,'2020-2-21');
+insert into Reserve values (231,64,'2020-3-23');
+insert into Reserve values (401,93,'2020-1-21');
+insert into Reserve values (383,90,'2020-1-5');
+insert into Reserve values (82,25,'2020-9-26');
+insert into Reserve values (182,97,'2020-6-8');
+insert into Reserve values (424,36,'2020-10-2');
+insert into Reserve values (307,56,'2020-9-20');
+insert into Reserve values (10,30,'2020-9-5');
+insert into Reserve values (218,20,'2020-6-20');
+insert into Reserve values (8,25,'2020-8-11');
+insert into Reserve values (60,94,'2020-11-19');
+insert into Reserve values (442,77,'2020-3-9');
+insert into Reserve values (452,13,'2020-1-19');
+insert into Reserve values (115,35,'2020-9-11');
+insert into Reserve values (146,31,'2020-3-5');
+insert into Reserve values (432,7,'2020-2-8');
+insert into Reserve values (201,52,'2020-1-9');
+insert into Reserve values (364,58,'2020-7-8');
+insert into Reserve values (485,35,'2020-12-28');
+insert into Reserve values (197,30,'2020-8-12');
+insert into Reserve values (144,54,'2020-5-13');
+insert into Reserve values (293,16,'2020-11-2');
+insert into Reserve values (26,37,'2020-1-20');
+insert into Reserve values (430,33,'2020-12-4');
+insert into Reserve values (35,23,'2020-4-13');
+insert into Reserve values (46,95,'2020-5-2');
+insert into Reserve values (233,96,'2020-6-2');
+insert into Reserve values (292,31,'2020-9-16');
+insert into Reserve values (411,50,'2020-4-27');
+insert into Reserve values (39,57,'2020-10-21');
+insert into Reserve values (29,16,'2020-4-14');
+insert into Reserve values (396,77,'2020-1-21');
+insert into Reserve values (282,92,'2020-10-20');
+insert into Reserve values (440,56,'2020-12-18');
+insert into Reserve values (141,49,'2020-12-7');
+insert into Reserve values (407,81,'2020-9-19');
+insert into Reserve values (350,90,'2020-5-21');
+insert into Reserve values (466,29,'2020-7-5');
+insert into Reserve values (49,73,'2020-4-13');
+insert into Reserve values (473,77,'2020-10-27');
+insert into Reserve values (415,39,'2020-6-7');
+insert into Reserve values (274,75,'2020-3-5');
+insert into Reserve values (297,6,'2020-1-7');
+insert into Reserve values (327,99,'2020-5-16');
+insert into Reserve values (63,34,'2020-10-7');
+insert into Reserve values (299,31,'2020-8-22');
+insert into Reserve values (310,35,'2020-11-5');
+insert into Reserve values (349,88,'2020-9-16');
+insert into Reserve values (269,38,'2020-3-12');
+insert into Reserve values (473,27,'2020-8-5');
+insert into Reserve values (136,16,'2020-7-13');
+insert into Reserve values (12,80,'2020-5-1');
+insert into Reserve values (121,66,'2020-8-9');
+insert into Reserve values (111,55,'2020-7-14');
+insert into Reserve values (194,97,'2020-1-9');
+insert into Reserve values (157,91,'2020-8-19');
+insert into Reserve values (240,97,'2020-12-21');
+insert into Reserve values (315,90,'2020-10-26');
+insert into Reserve values (459,60,'2020-7-25');
+insert into Reserve values (281,21,'2020-5-8');
+insert into Reserve values (384,5,'2020-7-14');
+insert into Reserve values (274,91,'2020-9-28');
+insert into Reserve values (329,57,'2020-7-18');
+insert into Reserve values (155,92,'2020-12-9');
+insert into Reserve values (85,58,'2020-3-8');
+insert into Reserve values (218,27,'2020-4-3');
+insert into Reserve values (304,20,'2020-3-18');
+insert into Reserve values (200,61,'2020-3-24');
+insert into Reserve values (7,82,'2020-11-17');
+insert into Reserve values (491,74,'2020-7-2');
+insert into Reserve values (393,53,'2020-3-24');
+insert into Reserve values (50,93,'2020-7-11');
+insert into Reserve values (397,100,'2020-1-13');
+insert into Reserve values (421,48,'2020-10-5');
+insert into Reserve values (343,54,'2020-6-5');
+insert into Reserve values (373,7,'2020-11-13');
+insert into Reserve values (11,71,'2020-7-17');
+insert into Reserve values (497,25,'2020-12-23');
+insert into Reserve values (318,99,'2020-5-17');
+insert into Reserve values (419,72,'2020-5-9');
+insert into Reserve values (338,18,'2020-3-19');
+insert into Reserve values (432,26,'2020-4-28');
+insert into Reserve values (224,49,'2020-5-3');
+insert into Reserve values (260,50,'2020-11-13');
+insert into Reserve values (51,73,'2020-8-20');
+insert into Reserve values (142,62,'2020-10-5');
+insert into Reserve values (263,52,'2020-12-9');
+insert into Reserve values (225,55,'2020-2-20');
+insert into Reserve values (222,31,'2020-3-21');
+insert into Reserve values (264,53,'2020-1-14');
+insert into Reserve values (37,25,'2020-11-5');
+insert into Reserve values (393,66,'2020-11-14');
+insert into Reserve values (218,1,'2020-6-24');
+insert into Reserve values (359,9,'2020-4-24');
+insert into Reserve values (389,45,'2020-9-11');
+insert into Reserve values (194,72,'2020-4-6');
+insert into Reserve values (449,10,'2020-10-4');
+insert into Reserve values (88,38,'2020-9-20');
+insert into Reserve values (292,29,'2020-10-9');
+insert into Reserve values (477,76,'2020-5-17');
+insert into Reserve values (162,52,'2020-7-4');
+insert into Reserve values (480,14,'2020-8-5');
+insert into Reserve values (342,4,'2020-6-16');
+insert into Reserve values (433,63,'2020-6-14');
+insert into Reserve values (419,84,'2020-2-16');
+insert into Reserve values (22,43,'2020-6-6');
+insert into Reserve values (329,45,'2020-3-25');
+insert into Reserve values (316,28,'2020-11-20');
+insert into Reserve values (392,74,'2020-5-23');
+insert into Reserve values (331,85,'2020-7-24');
+insert into Reserve values (33,66,'2020-4-24');
+insert into Reserve values (475,37,'2020-11-26');
+insert into Reserve values (253,80,'2020-6-6');
+insert into Reserve values (18,46,'2020-3-9');
+insert into Reserve values (476,22,'2020-4-10');
+insert into Reserve values (441,20,'2020-1-1');
+insert into Reserve values (123,81,'2020-8-18');
+insert into Reserve values (400,93,'2020-8-10');
+insert into Reserve values (74,84,'2020-12-1');
+insert into Reserve values (153,97,'2020-8-26');
+insert into Reserve values (73,48,'2020-8-19');
+insert into Reserve values (39,49,'2020-5-7');
+insert into Reserve values (62,48,'2020-1-23');
+insert into Reserve values (211,87,'2020-6-7');
+insert into Reserve values (344,6,'2020-3-18');
+insert into Reserve values (424,22,'2020-7-13');
+insert into Reserve values (345,87,'2020-5-4');
+insert into Reserve values (119,85,'2020-8-5');
+insert into Reserve values (469,57,'2020-7-27');
+insert into Reserve values (316,5,'2020-11-23');
+insert into Reserve values (250,88,'2020-5-16');
+insert into Reserve values (376,23,'2020-7-7');
+insert into Reserve values (282,70,'2020-2-26');
+insert into Reserve values (288,13,'2020-2-12');
+insert into Reserve values (351,95,'2020-3-19');
+insert into Reserve values (368,83,'2020-1-16');
+insert into Reserve values (426,93,'2020-12-8');
+insert into Reserve values (95,17,'2020-10-15');
+insert into Reserve values (101,41,'2020-2-28');
+insert into Reserve values (232,66,'2020-12-26');
+insert into Reserve values (72,41,'2020-12-10');
+insert into Reserve values (278,25,'2020-2-15');
+insert into Reserve values (144,75,'2020-11-22');
+insert into Reserve values (397,91,'2020-11-1');
+insert into Reserve values (335,74,'2020-5-5');
+insert into Reserve values (155,7,'2020-7-24');
+insert into Reserve values (17,48,'2020-5-12');
+insert into Reserve values (152,88,'2020-8-9');
+insert into Reserve values (261,93,'2020-3-5');
+insert into Reserve values (38,100,'2020-4-6');
+insert into Reserve values (409,18,'2020-2-22');
+insert into Reserve values (264,93,'2020-1-4');
+insert into Reserve values (293,73,'2020-6-1');
+insert into Reserve values (326,79,'2020-3-26');
+insert into Reserve values (461,29,'2020-9-2');
+insert into Reserve values (71,33,'2020-11-9');
+insert into Reserve values (330,71,'2020-6-25');
+insert into Reserve values (478,90,'2020-10-25');
+insert into Reserve values (395,45,'2020-8-28');
+insert into Reserve values (233,72,'2020-11-2');
+insert into Reserve values (454,67,'2020-11-21');
+insert into Reserve values (372,43,'2020-9-2');
+insert into Reserve values (394,57,'2020-1-2');
+insert into Reserve values (94,25,'2020-1-21');
+insert into Reserve values (268,17,'2020-1-5');
+insert into Reserve values (313,12,'2020-9-24');
+insert into Reserve values (457,16,'2020-10-13');
+insert into Reserve values (487,65,'2020-7-26');
+insert into Reserve values (475,6,'2020-9-9');
+insert into Reserve values (233,14,'2020-10-2');
+insert into Reserve values (286,44,'2020-9-25');
+insert into Reserve values (168,64,'2020-5-14');
+insert into Reserve values (55,50,'2020-5-23');
+insert into Reserve values (222,42,'2020-7-12');
+insert into Reserve values (487,21,'2020-9-8');
+insert into Reserve values (167,37,'2020-12-7');
+insert into Reserve values (348,58,'2020-4-9');
+insert into Reserve values (340,86,'2020-8-6');
+sailors count
+(500,)
+Boats count
+(100,)
+Reserve count
+(5001,)
+('Sue29', 'blue')
+('Sue33', 'blue')
+('Sue45', 'blue')
+('Sue55', 'blue')
+('Sue56', 'blue')
+('Sue58', 'blue')
+('Sue85', 'blue')
+('Sue95', 'blue')
+('Sue112', 'blue')
+('Sue131', 'blue')
+('Sue132', 'blue')
+('Sue149', 'blue')
+('Sue169', 'blue')
+('Sue183', 'blue')
+('Sue184', 'blue')
+('Sue196', 'blue')
+('Sue199', 'blue')
+('Sue243', 'blue')
+('Sue255', 'blue')
+('Sue257', 'blue')
+('Sue258', 'blue')
+('Sue272', 'blue')
+('Sue296', 'blue')
+('Sue296', 'blue')
+('Sue300', 'blue')
+('Sue317', 'blue')
+('Sue326', 'blue')
+('Sue326', 'blue')
+('Sue333', 'blue')
+('Sue339', 'blue')
+('Sue339', 'blue')
+('Sue350', 'blue')
+('Sue352', 'blue')
+('Sue381', 'blue')
+('Sue397', 'blue')
+('Sue402', 'blue')
+('Sue423', 'blue')
+('Sue426', 'blue')
+('Sue428', 'blue')
+('Sue447', 'blue')
+('Sue457', 'blue')
+('Sue457', 'blue')
+('Sue459', 'blue')
+('Sue460', 'blue')
+('Sue467', 'blue')
+('Sue489', 'blue')
+('Sue489', 'blue')
+('Sue496', 'blue')
+('Sue500', 'blue')
+('Sue23', 'blue')
+('Sue46', 'blue')
+('Sue49', 'blue')
+('Sue58', 'blue')
+('Sue58', 'blue')
+('Sue80', 'blue')
+('Sue83', 'blue')
+('Sue83', 'blue')
+('Sue87', 'blue')
+('Sue108', 'blue')
+('Sue108', 'blue')
+('Sue119', 'blue')
+('Sue137', 'blue')
+('Sue155', 'blue')
+('Sue167', 'blue')
+('Sue169', 'blue')
+('Sue175', 'blue')
+('Sue196', 'blue')
+('Sue200', 'blue')
+('Sue222', 'blue')
+('Sue227', 'blue')
+('Sue230', 'blue')
+('Sue257', 'blue')
+('Sue257', 'blue')
+('Sue264', 'blue')
+('Sue275', 'blue')
+('Sue277', 'blue')
+('Sue290', 'blue')
+('Sue292', 'blue')
+('Sue297', 'blue')
+('Sue301', 'blue')
+('Sue301', 'blue')
+('Sue306', 'blue')
+('Sue313', 'blue')
+('Sue313', 'blue')
+('Sue324', 'blue')
+('Sue331', 'blue')
+('Sue337', 'blue')
+('Sue346', 'blue')
+('Sue348', 'blue')
+('Sue350', 'blue')
+('Sue350', 'blue')
+('Sue357', 'blue')
+('Sue367', 'blue')
+('Sue369', 'blue')
+('Sue392', 'blue')
+('Sue407', 'blue')
+('Sue433', 'blue')
+('Sue441', 'blue')
+('Sue449', 'blue')
+('Sue2', 'blue')
+('Sue7', 'blue')
+('Sue9', 'blue')
+('Sue11', 'blue')
+('Sue26', 'blue')
+('Sue42', 'blue')
+('Sue44', 'blue')
+('Sue48', 'blue')
+('Sue65', 'blue')
+('Sue85', 'blue')
+('Sue85', 'blue')
+('Sue95', 'blue')
+('Sue107', 'blue')
+('Sue112', 'blue')
+('Sue121', 'blue')
+('Sue137', 'blue')
+('Sue153', 'blue')
+('Sue157', 'blue')
+('Sue160', 'blue')
+('Sue160', 'blue')
+('Sue179', 'blue')
+('Sue182', 'blue')
+('Sue186', 'blue')
+('Sue186', 'blue')
+('Sue194', 'blue')
+('Sue194', 'blue')
+('Sue202', 'blue')
+('Sue213', 'blue')
+('Sue219', 'blue')
+('Sue220', 'blue')
+('Sue224', 'blue')
+('Sue240', 'blue')
+('Sue249', 'blue')
+('Sue258', 'blue')
+('Sue273', 'blue')
+('Sue277', 'blue')
+('Sue279', 'blue')
+('Sue284', 'blue')
+('Sue292', 'blue')
+('Sue294', 'blue')
+('Sue314', 'blue')
+('Sue314', 'blue')
+('Sue316', 'blue')
+('Sue339', 'blue')
+('Sue340', 'blue')
+('Sue342', 'blue')
+('Sue370', 'blue')
+('Sue383', 'blue')
+('Sue388', 'blue')
+('Sue390', 'blue')
+('Sue394', 'blue')
+('Sue410', 'blue')
+('Sue417', 'blue')
+('Sue428', 'blue')
+('Sue432', 'blue')
+('Sue432', 'blue')
+('Sue450', 'blue')
+('Sue457', 'blue')
+('Sue470', 'blue')
+('Sue475', 'blue')
+('Sue496', 'blue')
+('Sue3', 'blue')
+('Sue10', 'blue')
+('Sue13', 'blue')
+('Sue15', 'blue')
+('Sue25', 'blue')
+('Sue34', 'blue')
+('Sue39', 'blue')
+('Sue45', 'blue')
+('Sue46', 'blue')
+('Sue48', 'blue')
+('Sue58', 'blue')
+('Sue113', 'blue')
+('Sue117', 'blue')
+('Sue137', 'blue')
+('Sue153', 'blue')
+('Sue158', 'blue')
+('Sue173', 'blue')
+('Sue176', 'blue')
+('Sue179', 'blue')
+('Sue180', 'blue')
+('Sue183', 'blue')
+('Sue205', 'blue')
+('Sue219', 'blue')
+('Sue224', 'blue')
+('Sue225', 'blue')
+('Sue234', 'blue')
+('Sue239', 'blue')
+('Sue243', 'blue')
+('Sue272', 'blue')
+('Sue295', 'blue')
+('Sue312', 'blue')
+('Sue314', 'blue')
+('Sue318', 'blue')
+('Sue327', 'blue')
+('Sue344', 'blue')
+('Sue345', 'blue')
+('Sue354', 'blue')
+('Sue359', 'blue')
+('Sue361', 'blue')
+('Sue369', 'blue')
+('Sue395', 'blue')
+('Sue404', 'blue')
+('Sue408', 'blue')
+('Sue414', 'blue')
+('Sue418', 'blue')
+('Sue428', 'blue')
+('Sue446', 'blue')
+('Sue455', 'blue')
+('Sue470', 'blue')
+('Sue471', 'blue')
+('Sue475', 'blue')
+('Sue497', 'blue')
+Reserve count
+(4789,)

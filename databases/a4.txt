@@ -1,0 +1,133 @@
+3 queries on my PDA database with english descriptions:
+
+1)Find all information on the songs Jamiya4 listened to that are less than or equal to Dirty K4
+select * from Users U join Listens L on L.userName=U.name join Song S on L.songName=S.name where U.name='Jamiya4' and S.name<='Dirty K4';
++---------+-----+--------------+-------+------------+----------+-----------+------------+-----------+-------------+--------------+------------+------------+
+| name    | age | city         | state | dateJoined | userName | songName  | numListens | name      | genre       | dateReleased | isExplicit | numListens |
++---------+-----+--------------+-------+------------+----------+-----------+------------+-----------+-------------+--------------+------------+------------+
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K14 |        429 | Dirty K14 | Hip-Hop/Rap | 1997-04-08   |          1 | 169806559  |
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K21 |        419 | Dirty K21 | Hip-Hop/Rap | 2013-05-09   |          1 | 169878402  |
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K22 |        149 | Dirty K22 | Hip-Hop/Rap | 2000-03-18   |          1 | 519794418  |
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K23 |        278 | Dirty K23 | Hip-Hop/Rap | 2011-02-10   |          1 | 156781683  |
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K27 |        475 | Dirty K27 | Hip-Hop/Rap | 2000-05-28   |          1 | 238949882  |
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K35 |          4 | Dirty K35 | Hip-Hop/Rap | 1998-04-06   |          1 | 550095282  |
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K38 |         71 | Dirty K38 | Hip-Hop/Rap | 2005-09-27   |          1 | 676287990  |
+| Jamiya4 |  40 | Philadelphia | PA    | 2019-07-28 | Jamiya4  | Dirty K4  |        432 | Dirty K4  | Hip-Hop/Rap | 2012-01-10   |          1 | 416927026  |
++---------+-----+--------------+-------+------------+----------+-----------+------------+-----------+-------------+--------------+------------+------------+
+8 rows in set (0.0033 sec)
+
+2)List all the infomration on all 35-year old artists in alpabetical order by home state
+ MySQL  localhost:3306 ssl  musicappdb  SQL > select * from Artist A where A.age=35 group by A.state;
++--------------+-----+-------------+-------+
+| name         | age | city        | state |
++--------------+-----+-------------+-------+
+| 21 Savage94  |  35 | Atlanta     | GA    |
+| MF DOOM25    |  35 | Long Island | NY    |
+| Rico Nasty61 |  35 | Palmer Park | MD    |
+| SZA46        |  35 | St. Louis   | MO    |
++--------------+-----+-------------+-------+
+4 rows in set (0.0007 sec)
+
+3)Find the name of all artists in alphabetical order that have performed exactly 4 songs
+ MySQL  localhost:3306 ssl  musicappdb  SQL > select A.name from Artist A, Song S, Performs P where A.name=P.artistName and S.name=P.songName group by P.artistName having count(*)=4;
++--------------+
+| name         |
++--------------+
+| 21 Savage2   |
+| J. Cole15    |
+| J. Cole18    |
+| J. Cole78    |
+| J. Cole85    |
+| MF DOOM17    |
+| MF DOOM62    |
+| Rico Nasty2  |
+| Sade22       |
+| Sade82       |
+| SZA16        |
+| SZA67        |
+| Young Nudy15 |
++--------------+
+13 rows in set (0.0024 sec)
+
+
+3 data modification commands on my PDA:
+
+1)Simple Insert:
+ MySQL  localhost:3306 ssl  musicappdb  SQL > insert into Users values('Oscar201', 21, 'Fayetteville', 'NC', '2021-02-17');
+Query OK, 1 row affected (0.0017 sec)
+ MySQL  localhost:3306 ssl  musicappdb  SQL > select * from Users U where U.name='Oscar201';
++----------+-----+--------------+-------+------------+
+| name     | age | city         | state | dateJoined |
++----------+-----+--------------+-------+------------+
+| Oscar201 |  21 | Fayetteville | NC    | 2021-02-17 |
++----------+-----+--------------+-------+------------+
+1 row in set (0.0002 sec)
+
+2)Simple Update:
+ MySQL  localhost:3306 ssl  musicappdb  SQL > update Users set age=age+1 where name='Oscar201';
+Query OK, 1 row affected (0.0016 sec)
+
+Rows matched: 1  Changed: 1  Warnings: 0
+ MySQL  localhost:3306 ssl  musicappdb  SQL > select * from Users U where U.name='Oscar201';
++----------+-----+--------------+-------+------------+
+| name     | age | city         | state | dateJoined |
++----------+-----+--------------+-------+------------+
+| Oscar201 |  22 | Fayetteville | NC    | 2021-02-17 |
++----------+-----+--------------+-------+------------+
+1 row in set (0.0002 sec)
+
+3)Update of seval tuples:
+ MySQL  localhost:3306 ssl  musicappdb  SQL > select * from Artist A where A.age=22;
++----------------------+-----+--------------+---------+
+| name                 | age | city         | state   |
++----------------------+-----+--------------+---------+
+| 21 Savage60          |  22 | Atlanta      | GA      |
+| 21 Savage91          |  22 | Atlanta      | GA      |
+| J. Cole31            |  22 | Fayetteville | NC      |
+| J. Cole64            |  22 | Fayetteville | NC      |
+| J.I.D.77             |  22 | Atlanta      | GA      |
+| MF DOOM76            |  22 | Long Island  | NY      |
+| MF DOOM89            |  22 | Long Island  | NY      |
+| MF DOOM9             |  22 | Long Island  | NY      |
+| Rico Nasty84         |  22 | Palmer Park  | MD      |
+| Rico Nasty91         |  22 | Palmer Park  | MD      |
+| Sade87               |  22 | Ibadan       | Nigeria |
+| The Isley Brothers60 |  22 | Cincinnati   | OH      |
+| The Isley Brothers64 |  22 | Cincinnati   | OH      |
++----------------------+-----+--------------+---------+
+13 rows in set (0.0004 sec)
+ MySQL  localhost:3306 ssl  musicappdb  SQL > update Artist set age=age+1 where age=22;
+Query OK, 13 rows affected (0.0023 sec)
+
+Rows matched: 13  Changed: 13  Warnings: 0
+ MySQL  localhost:3306 ssl  musicappdb  SQL > select * from Artist A where A.age=23;
++----------------------+-----+--------------+---------+
+| name                 | age | city         | state   |
++----------------------+-----+--------------+---------+
+| 21 Savage60          |  23 | Atlanta      | GA      |
+| 21 Savage91          |  23 | Atlanta      | GA      |
+| J. Cole17            |  23 | Fayetteville | NC      |
+| J. Cole31            |  23 | Fayetteville | NC      |
+| J. Cole36            |  23 | Fayetteville | NC      |
+| J. Cole39            |  23 | Fayetteville | NC      |
+| J. Cole64            |  23 | Fayetteville | NC      |
+| J.I.D.15             |  23 | Atlanta      | GA      |
+| J.I.D.16             |  23 | Atlanta      | GA      |
+| J.I.D.77             |  23 | Atlanta      | GA      |
+| MF DOOM67            |  23 | Long Island  | NY      |
+| MF DOOM76            |  23 | Long Island  | NY      |
+| MF DOOM89            |  23 | Long Island  | NY      |
+| MF DOOM9             |  23 | Long Island  | NY      |
+| Rico Nasty14         |  23 | Palmer Park  | MD      |
+| Rico Nasty20         |  23 | Palmer Park  | MD      |
+| Rico Nasty41         |  23 | Palmer Park  | MD      |
+| Rico Nasty84         |  23 | Palmer Park  | MD      |
+| Rico Nasty91         |  23 | Palmer Park  | MD      |
+| Sade24               |  23 | Ibadan       | Nigeria |
+| Sade87               |  23 | Ibadan       | Nigeria |
+| SZA85                |  23 | St. Louis    | MO      |
+| SZA92                |  23 | St. Louis    | MO      |
+| The Isley Brothers60 |  23 | Cincinnati   | OH      |
+| The Isley Brothers64 |  23 | Cincinnati   | OH      |
++----------------------+-----+--------------+---------+
+25 rows in set (0.0007 sec)

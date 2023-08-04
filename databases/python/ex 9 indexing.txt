@@ -1,0 +1,164 @@
+ db.thePeople.find({pid:{$eq:197}}).explain('executionStats')
+{
+        "queryPlanner" : {
+                "plannerVersion" : 1,
+                "namespace" : "db_people.thePeople",
+                "indexFilterSet" : false,
+                "parsedQuery" : {
+                        "pid" : {
+                                "$eq" : 197
+                        }
+                },
+                "winningPlan" : {
+                        "stage" : "COLLSCAN",
+                        "filter" : {
+                                "pid" : {
+                                        "$eq" : 197
+                                }
+                        },
+                        "direction" : "forward"
+                },
+                "rejectedPlans" : [ ]
+        },
+        "executionStats" : {
+                "executionSuccess" : true,
+                "nReturned" : 1,
+                "executionTimeMillis" : 127,
+                "totalKeysExamined" : 0,
+                "totalDocsExamined" : 200000,
+                "executionStages" : {
+                        "stage" : "COLLSCAN",
+                        "filter" : {
+                                "pid" : {
+                                        "$eq" : 197
+                                }
+                        },
+                        "nReturned" : 1,
+                        "executionTimeMillisEstimate" : 9,
+                        "works" : 200002,
+                        "advanced" : 1,
+                        "needTime" : 200000,
+                        "needYield" : 0,
+                        "saveState" : 200,
+                        "restoreState" : 200,
+                        "isEOF" : 1,
+                        "direction" : "forward",
+                        "docsExamined" : 200000
+                }
+        },
+        "serverInfo" : {
+                "host" : "DESKTOP-8DA7PF6",
+                "port" : 27017,
+                "version" : "4.4.4",
+                "gitVersion" : "8db30a63db1a9d84bdcad0c83369623f708e0397"
+        },
+        "ok" : 1
+}
+> db.thePeople.ensureIndex({"pid":1})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+> db.thePeople.find({pid:{$eq:197}}).explain('executionStats')
+{
+        "queryPlanner" : {
+                "plannerVersion" : 1,
+                "namespace" : "db_people.thePeople",
+                "indexFilterSet" : false,
+                "parsedQuery" : {
+                        "pid" : {
+                                "$eq" : 197
+                        }
+                },
+                "winningPlan" : {
+                        "stage" : "FETCH",
+                        "inputStage" : {
+                                "stage" : "IXSCAN",
+                                "keyPattern" : {
+                                        "pid" : 1
+                                },
+                                "indexName" : "pid_1",
+                                "isMultiKey" : false,
+                                "multiKeyPaths" : {
+                                        "pid" : [ ]
+                                },
+                                "isUnique" : false,
+                                "isSparse" : false,
+                                "isPartial" : false,
+                                "indexVersion" : 2,
+                                "direction" : "forward",
+                                "indexBounds" : {
+                                        "pid" : [
+                                                "[197.0, 197.0]"
+                                        ]
+                                }
+                        }
+                },
+                "rejectedPlans" : [ ]
+        },
+        "executionStats" : {
+                "executionSuccess" : true,
+                "nReturned" : 1,
+                "executionTimeMillis" : 1,
+                "totalKeysExamined" : 1,
+                "totalDocsExamined" : 1,
+                "executionStages" : {
+                        "stage" : "FETCH",
+                        "nReturned" : 1,
+                        "executionTimeMillisEstimate" : 0,
+                        "works" : 2,
+                        "advanced" : 1,
+                        "needTime" : 0,
+                        "needYield" : 0,
+                        "saveState" : 0,
+                        "restoreState" : 0,
+                        "isEOF" : 1,
+                        "docsExamined" : 1,
+                        "alreadyHasObj" : 0,
+                        "inputStage" : {
+                                "stage" : "IXSCAN",
+                                "nReturned" : 1,
+                                "executionTimeMillisEstimate" : 0,
+                                "works" : 2,
+                                "advanced" : 1,
+                                "needTime" : 0,
+                                "needYield" : 0,
+                                "saveState" : 0,
+                                "restoreState" : 0,
+                                "isEOF" : 1,
+                                "keyPattern" : {
+                                        "pid" : 1
+                                },
+                                "indexName" : "pid_1",
+                                "isMultiKey" : false,
+                                "multiKeyPaths" : {
+                                        "pid" : [ ]
+                                },
+                                "isUnique" : false,
+                                "isSparse" : false,
+                                "isPartial" : false,
+                                "indexVersion" : 2,
+                                "direction" : "forward",
+                                "indexBounds" : {
+                                        "pid" : [
+                                                "[197.0, 197.0]"
+                                        ]
+                                },
+                                "keysExamined" : 1,
+                                "seeks" : 1,
+                                "dupsTested" : 0,
+                                "dupsDropped" : 0
+                        }
+                }
+        },
+        "serverInfo" : {
+                "host" : "DESKTOP-8DA7PF6",
+                "port" : 27017,
+                "version" : "4.4.4",
+                "gitVersion" : "8db30a63db1a9d84bdcad0c83369623f708e0397"
+        },
+        "ok" : 1
+}
+>
